@@ -1,0 +1,40 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  // url = env("DATABASE_URL") satırı Prisma 7 kuralı gereği tamamen silindi!
+}
+
+model Settings {
+  id          Int    @id @default(1)
+  markerColor String @default("#f43f5e")
+  markerIcon  String @default("lightbulb")
+  borderColor String @default("#4f46e5")
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      String   @default("Yönetici")
+  createdAt DateTime @default(now())
+}
+
+model Marker {
+  id           String   @id @default(uuid())
+  lat          Float
+  lng          Float
+  description  String?
+  contactInfo  String?
+  street       String?
+  neighborhood String?
+  status       String   @default("İncelemede")
+  eta          String   @default("Belirlenmedi")
+  imageData    String?
+  isTest       Boolean  @default(false)
+  createdAt    DateTime @default(now())
+}

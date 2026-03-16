@@ -1,0 +1,36 @@
+{
+  "name": "uskudarkentas",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@turf/turf": "^7.3.4",
+    "@types/leaflet": "^1.9.21",
+    "cloudinary": "^2.9.0",
+    "firebase": "^12.10.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.576.0",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-leaflet": "^5.0.0",
+    "react-leaflet-cluster": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5"
+  }
+}
